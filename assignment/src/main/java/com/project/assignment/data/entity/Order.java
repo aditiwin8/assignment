@@ -19,7 +19,7 @@ public class Order {
     private LocalDate orderDate;
     private String orderStatus;
 
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name = "orderId")
     private List<OrderItem> collectionOfItems;
 }
